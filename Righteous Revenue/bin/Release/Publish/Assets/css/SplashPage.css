@@ -1,0 +1,98 @@
+﻿body {
+
+}
+
+@media only screen and (max-width: 600px) {
+    #container {
+        display:grid;
+        grid-template-areas:
+            "sidebar header"
+            "sidebar info1"
+            "sidebar info2"
+            "sidebar info3";
+    }
+    nav{
+        display:none;
+    }
+    .close {
+        position: absolute;
+        left: 30vw;
+        top: 1vh;
+        width: 32px;
+        height: 32px;
+        opacity:0.3;
+    }
+
+    .close:hover {
+       opacity:1;
+    }
+    .close:before, .close:after {
+        position: absolute;
+        left: 9vw;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color:white;
+    }
+
+    .close:before {
+        transform: rotate(45deg);
+    }
+
+    .close:after {
+        transform: rotate(-45deg);
+    }
+
+    header{
+        grid-area:header;
+        text-align:left;
+        height:5vh;
+    }
+    #sidebar {
+        grid-area: sidebar;
+        position: fixed;
+        width: 50vw;
+        height: 100vh;
+        font-family: sans-serif;
+        background: #0052af;
+        left: -51.5vw;
+        transition: all 400ms linear;
+        -webkit-box-shadow: 5px 2px 5px 1px rgba(0,0,0,0.49);
+        -moz-box-shadow: 5px 2px 5px 1px rgba(0,0,0,0.49);
+        box-shadow: 5px 2px 5px 1px rgba(0,0,0,0.49);
+    }
+    #sidebar.active{
+        left:-8vw;
+    }
+    #sidebar ul li {
+        color:rgba(230,230,230,0.9);
+        list-style:none;
+        padding:15px 10px;
+        border-bottom:1px solid rgba(230,230,230,0.9);
+    }
+    #sidebar .toggle-btn{
+        position:absolute;
+        left:52vw;
+        top:0px;
+        cursor:pointer;
+    }
+    #sidebar .toggle-btn span{
+        display:block;
+        width:30px;
+        height:5px;
+        background:#151719;
+        margin: 5px 0px;
+    }
+    .info1{
+        grid-area:info1;
+        width:70vw;
+    }
+    .info2 {
+        grid-area: info2;
+        width:70vw;
+    }
+    .info3 {
+        grid-area: info3;
+        width:70vw;
+    }
+}

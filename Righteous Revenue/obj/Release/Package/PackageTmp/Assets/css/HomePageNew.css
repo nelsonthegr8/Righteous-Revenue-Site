@@ -1,0 +1,206 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+form {
+    background-color: #ecf9ff;
+}
+
+body {
+    color: #272727;
+    font-family: 'Quicksand', serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 1rem;
+}
+
+.main {
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.AtmCalculatorContainer {
+    display:grid;
+    grid-template-columns:repeat(2fr,2);
+    grid-gap:2%;
+    padding-bottom:2%;
+}
+
+.Twentytxt {
+    grid-column: 1;
+    grid-row:1;
+    color:green;
+    text-align: left;
+}
+
+.Tentxt {
+    grid-column: 1;
+    grid-row: 2;
+    color: green;
+    text-align: left;
+}
+
+.Fivetxt {
+    grid-column: 1;
+    grid-row: 3;
+    color: green;
+    text-align: left;
+}
+
+.Singletxt {
+    grid-column: 1;
+    grid-row: 4;
+    color: green;
+    text-align: left;
+}
+
+.TwentyOutput {
+    grid-column: 2;
+    grid-row: 1;
+    color: blue;
+    text-align: left;
+}
+.TenOutput {
+    grid-column: 2;
+    grid-row: 2;
+    color: blue;
+    text-align: left;
+}
+.FiveOutput {
+    grid-column: 2;
+    grid-row: 3;
+    color: blue;
+    text-align: left;
+}
+.SingleOutput {
+    grid-column: 2;
+    grid-row: 4;
+    color: blue;
+    text-align: left;
+}
+
+.uncheckallbtn {
+    grid-column: 1;
+    grid-row: 5;
+    color: white;
+    cursor: pointer;
+}
+
+.deletebtn {
+    grid-column: 2;
+    grid-row: 5;
+    color: white;
+    cursor:pointer;
+}
+
+.billnametxtbx {
+    grid-column: 1;
+    grid-row: 6;
+    cursor: pointer;
+}
+
+.billamnttxtbx {
+    grid-column: 2;
+    grid-row: 6;
+    cursor: pointer;
+}
+
+.atmaddbtn{
+    grid-column:1 / span 2;
+    grid-row:7;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.btns {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+}
+
+    .btns:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+@media (min-width: 55rem) {
+    .cards_item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 84rem) {
+    .cards_item {
+        width: 33.3333%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+
+.card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
