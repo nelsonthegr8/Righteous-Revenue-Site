@@ -24,24 +24,6 @@ namespace FinanceSite
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserHeader;
 
         /// <summary>
-        /// BillsChckbx control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList BillsChckbx;
-
-        /// <summary>
-        /// billsAddBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button billsAddBtn;
-
-        /// <summary>
         /// Atmchkbx control.
         /// </summary>
         /// <remarks>
@@ -49,6 +31,42 @@ namespace FinanceSite
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList Atmchkbx;
+
+        /// <summary>
+        /// TwentyOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TwentyOutput;
+
+        /// <summary>
+        /// TenOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TenOutput;
+
+        /// <summary>
+        /// FiveOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label FiveOutput;
+
+        /// <summary>
+        /// SingleOutput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SingleOutput;
 
         /// <summary>
         /// UncheckAllbtn control.
@@ -69,21 +87,39 @@ namespace FinanceSite
         protected global::System.Web.UI.WebControls.Button Deletebtn;
 
         /// <summary>
-        /// billnameTxtbx control.
+        /// AtmbillnameTxtbx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox billnameTxtbx;
+        protected global::System.Web.UI.WebControls.TextBox AtmbillnameTxtbx;
 
         /// <summary>
-        /// billamntTxtbx control.
+        /// AtmbillamntTxtbx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox billamntTxtbx;
+        protected global::System.Web.UI.WebControls.TextBox AtmbillamntTxtbx;
+
+        /// <summary>
+        /// BillsChckbx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList BillsChckbx;
+
+        /// <summary>
+        /// billsAddBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button billsAddBtn;
     }
 }

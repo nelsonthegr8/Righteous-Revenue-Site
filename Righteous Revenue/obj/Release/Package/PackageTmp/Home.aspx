@@ -21,6 +21,33 @@
       <ul class="cards">
         <li class="cards_item">
           <div class="card">
+            <div class="card_image"><img src="Assets/images/CardImage3.png"/></div>
+            <div class="card_content">
+              <h2 class="card_title">Atm Withdrawl Calculator</h2>
+                <asp:CheckBoxList ID="Atmchkbx" runat="server" AutoPostBack="true" OnSelectedIndexChanged="atmchkchanged"></asp:CheckBoxList>
+                <div class="AtmCalculatorContainer">
+                    <span id="Twentytxt" class="Twentytxt">$20:</span>
+                    <span id="Tentxt" class="Tentxt">$10:</span>
+                    <span id="Fivetxt" class="Fivetxt">$5:</span>
+                    <span id="Singletxt" class="Singletxt">$1:</span>
+                    <asp:label runat="server" id="TwentyOutput" class="TwentyOutput" Text="0"></asp:label>
+                    <asp:label runat="server" id="TenOutput" class="TenOutput" Text="0"></asp:label>
+                    <asp:label runat="server" id="FiveOutput" class="FiveOutput" Text="0"></asp:label>
+                    <asp:label runat="server" id="SingleOutput" class="SingleOutput" Text="0"></asp:label>
+                    
+                    <asp:button runat="server" ID="UncheckAllbtn" Text="Reset" class="uncheckallbtn btn btn-info" OnClick="AtmUncheckAllbtn_Click"></asp:button>
+                    <asp:button runat="server" ID="Deletebtn" Text="Delete" class="deletebtn btn btn-danger" OnClick="AtmDeletebtn_Click"></asp:button>
+
+                    <asp:TextBox runat="server" ID="AtmbillnameTxtbx" Placeholder="Enter: Bill Name" class="atmbillnametxtbx"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="AtmbillamntTxtbx" Placeholder="Enter: Bill Amount" class="atmbillamnttxtbx"></asp:TextBox>
+
+                    <asp:button runat="server" class="atmaddbtn btn btn-success" OnClick="AtmAdd_Click" Text="Add"/>
+                </div>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
             <div class="card_image"><img src="Assets/images/Layout Picture.png"/></div>
             <div class="card_content">
               <h2 class="card_title">Bills Checklist</h2>
@@ -32,34 +59,6 @@
           </div>
         </li>
         <li class="cards_item">
-          <div class="card">
-            <div class="card_image"><img src="Assets/images/CardImage3.png"/></div>
-            <div class="card_content">
-              <h2 class="card_title">Atm Withdrawl Calculator</h2>
-                <asp:CheckBoxList ID="Atmchkbx" runat="server"></asp:CheckBoxList>
-                <div class="AtmCalculatorContainer">
-                    <span id="Twentytxt" class="Twentytxt">$20:</span>
-                    <span id="Tentxt" class="Tentxt">$10:</span>
-                    <span id="Fivetxt" class="Fivetxt">$5:</span>
-                    <span id="Singletxt" class="Singletxt">$1:</span>
-                    <span id="TwentyOutput" class="TwentyOutput">10</span>
-                    <span id="TenOutput" class="TenOutput">5</span>
-                    <span id="FiveOutput" class="FiveOutput">2</span>
-                    <span id="SingleOutput" class="SingleOutput">1</span>
-                    
-                    <asp:button runat="server" ID="UncheckAllbtn" Text="Reset" class="uncheckallbtn btn btn-info"></asp:button>
-                    <asp:button runat="server" ID="Deletebtn" Text="Delete" class="deletebtn btn btn-danger"></asp:button>
-
-                    <asp:TextBox runat="server" ID="billnameTxtbx" Placeholder="Enter: Bill Name" class="billnametxtbx"></asp:TextBox>
-                    <asp:TextBox runat="server" ID="billamntTxtbx" Placeholder="Enter: Bill Amount" class="billamnttxtbx"></asp:TextBox>
-
-                    <button class="atmaddbtn btn btn-success">Add</button>
-                </div>
-              
-            </div>
-          </div>
-        </li>
-          <li class="cards_item">
           <div class="card">
             <div class="card_image"><img src="Assets/images/CardImage2.png"/></div>
             <div class="card_content">

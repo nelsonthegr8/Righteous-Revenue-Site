@@ -13,6 +13,7 @@ namespace FinanceSite.Constructors
         public string billname { get; set; }
         public double billamount { get; set; }
         public bool Check { get; set; }
+        public int id { get; set; }
 
         public BillsChecklist()
         {
@@ -25,7 +26,7 @@ namespace FinanceSite.Constructors
         /// <param name="billname"></param>
         /// <param name="billamount"></param>
         /// <param name="Check"></param>
-        public BillsChecklist( string username,string billname, double billamount ,bool Check )
+        public BillsChecklist( string username,string billname, double billamount)
         {
             this.username = username;
             this.billname = billname;

@@ -100,13 +100,13 @@ body {
     cursor:pointer;
 }
 
-.billnametxtbx {
+.atmbillnametxtbx {
     grid-column: 1;
     grid-row: 6;
     cursor: pointer;
 }
 
-.billamnttxtbx {
+.atmbillamnttxtbx {
     grid-column: 2;
     grid-row: 6;
     cursor: pointer;

@@ -9,12 +9,11 @@ namespace FinanceSite.Constructors
     {
         public string username { get; set; }
         public string billname { get; set; }
-        public double billamount { get; set; }
+        public int billamount { get; set; } 
         public int twenty { get; set; }
         public int ten { get; set; }
         public int five { get; set; }
         public int one { get; set; }
-        public bool Check { get; set; }
         public int id { get; set; }
 
         public AtmChecklist()
@@ -24,16 +23,24 @@ namespace FinanceSite.Constructors
         ///<summary>
         ///Constructor is used to add all the paramaters needed to save to the database
         ///</summary>
-        public AtmChecklist(string username, string billname, double billamount, int twenty, int ten, int five, int one, bool Check)
+        public AtmChecklist(string username, string billname, int billamount)
         {
             this.username = username;
             this.billname = billname;
             this.billamount = billamount;
-            this.twenty = twenty;
-            this.ten = ten;
-            this.five = five;
-            this.one = one;
-            this.Check = Check;
+            billamntBreakdown(billamount);
+        }
+
+        private void billamntBreakdown(int billAmount) 
+        {
+            int remainder = 0;
+            twenty = billAmount / 20;
+            remainder = billAmount - (twenty * 20);
+            ten = remainder / 10;
+            remainder = remainder - (ten * 10);
+            five = remainder / 5;
+            remainder = remainder - (five * 5);
+            one = remainder;
         }
 
     }

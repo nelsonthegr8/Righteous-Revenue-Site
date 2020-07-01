@@ -86,7 +86,7 @@ namespace FinanceSite.Constructors
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DatabaseConnection.CnnVal("FinanceDB")))
             {
-                var output = connection.Query<AtmChecklist>($"SELECT billname, billamount,twenty,ten,five,one,checked,id FROM AtmChecklist WHERE username='{username}'").ToList();
+                var output = connection.Query<AtmChecklist>($"SELECT billname, billamount,twenty,ten,five,one,id FROM AtmChecklist WHERE username='{username}'").ToList();
                 return output;
             }
         }
@@ -99,5 +99,72 @@ namespace FinanceSite.Constructors
                 return output;
             }
         }
+
+        public void AddAtmBill(AtmChecklist info) 
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["FinanceDB"].ConnectionString;
+            int status;
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SetAtmWithdrawlChecklist", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Username", info.username);
+                cmd.Parameters.AddWithValue("@Billname", info.billname);
+                cmd.Parameters.AddWithValue("@Billamount", info.billamount);
+                cmd.Parameters.AddWithValue("@20", info.twenty);
+                cmd.Parameters.AddWithValue("@10", info.ten);
+                cmd.Parameters.AddWithValue("@5", info.five);
+                cmd.Parameters.AddWithValue("@1", info.one);
+                con.Open();
+
+                status = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+                con.Close();
+            }
+
+        }
+
+        public void AddBill(AtmChecklist info)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["FinanceDB"].ConnectionString;
+            int status;
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SetBillsChecklist", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Username", info.username);
+                cmd.Parameters.AddWithValue("@Billname", info.billname);
+                cmd.Parameters.AddWithValue("@Billamount", info.billamount);
+                cmd.Parameters.AddWithValue("@Checked", "false");
+                con.Open();
+
+                status = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+                con.Close();
+            }
+
+        }
+
+        public void RemoveItemFromCheckedList(int id, int checkbox) 
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["FinanceDB"].ConnectionString;
+            int status;
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("RemoveItemFromCheckedList", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@checkbox", checkbox);
+                con.Open();
+
+                status = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+                con.Close();
+            }
+        }
+
     }
 }
